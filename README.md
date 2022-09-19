@@ -24,8 +24,6 @@ The script defines a bounding region around the initial starting location, an al
 
 This scripting approach can also be used for other collection patterns. Optionally, waypoints could be loaded from an external source, such as a CSV file, and then used to position the drone camera for each frame.
 
-For more interactive control, it may be useful to use the AirSim Image APIs to access the image data directly in the Python code. We recommend the `simGetImages` function call, which can provide multiple image types simultaneously. More information can be found at https://microsoft.github.io/AirSim/image_apis/.
-
 ## 3D Reconstruction
 
 The reconstruction script `airsim_reconstruct.py` can be used to build a 3D point cloud from a recorded AirSim sequence. Options are provided to load a specific run by its folder name (timestamp) or to simply reconstruct the last run. Additionally, we can specify a step size to skip frames, a maximum depth distance, and choose whether to save a point cloud for each frame or just the entire combined scene. The option flag `--seg` will use the segmentation colormap instead of the true image colors, and the flag `--vis` will automatically display the result.
